@@ -4,8 +4,8 @@ import styled from "styled-components";
 export default function CFemailer(props) {
   const ButtonWrapper = styled.a`
     position: fixed;
-    bottom: 0px;
-    right: 0px;
+    bottom: 20px;
+    right: 20px;
     padding: 20px;
   `;
 
