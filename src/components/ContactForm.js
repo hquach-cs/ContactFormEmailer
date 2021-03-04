@@ -1,37 +1,109 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import "./ContactFormStyled.css";
 
+const initialFormData = {
+  Name: "",
+  Email: "",
+  Subject: "",
+  Message: "",
+};
+
 const ContactForm = (props) => {
+  const [formData, updateFormData] = useState(initialFormData);
+
+  const handleSubmit = (e) => {
+    console.log(formData);
+    e.preventDefault();
+    axios({
+      method: "POST",
+      url: "http://localhost:5000/send",
+      data: formData,
+    }).then((response) => {
+      if (response.data.status === 1) {
+        alert("Message sent");
+        this.resetForm();
+      } else if (response.data.status === 0) {
+        alert("Message failed to send");
+      }
+    });
+  };
+
+  const handleChange = (e) => {
+    updateFormData({
+      ...formData,
+
+      // Trimming any whitespace
+      [e.target.name]: e.target.value,
+    });
+  };
+
   return (
-    <form style={{ display: props.open ? "flex" : "none" }}>
+    <form style={{ display: props.open ? "flex" : "none" }} autocomplete="off">
       <h2>Contact Form</h2>
-      <div class="form__group field">
+      <div className="form__group field">
+        <input
+          type="input"
+          className="form__field"
+          placeholder="Name"
+          name="Name"
+          id="name"
+          onChange={handleChange}
+          autocomplete="off"
+          required
+        />
+        <label htmlFor="Name" className="form__label">
+          Name
+        </label>
+      </div>
+      <div className="form__group field">
         <input
           type="email"
-          class="form__field"
+          className="form__field"
           placeholder="Email"
           name="Email"
           id="email"
+          onChange={handleChange}
+          autocomplete="off"
           required
         />
-        <label for="Email" class="form__label">
+        <label htmlFor="Email" className="form__label">
           Email
         </label>
       </div>
-      <div class="form__group field">
+      <div className="form__group field">
         <input
           type="input"
-          class="form__field"
+          className="form__field"
+          placeholder="Subject"
+          name="Subject"
+          id="subject"
+          onChange={handleChange}
+          autocomplete="off"
+          required
+        />
+        <label htmlFor="Subject" className="form__label">
+          Subject
+        </label>
+      </div>
+      <div className="form__group field">
+        <input
+          type="input"
+          className="form__field"
           placeholder="Name"
           name="Message"
           id="message"
+          onChange={handleChange}
+          autocomplete="off"
           required
         />
-        <label for="message" class="form__label">
+        <label htmlFor="Message" className="form__label">
           Message
         </label>
       </div>
-      <button class="form-button">Submit</button>
+      <button type="button" className="form-button" onClick={handleSubmit}>
+        Submit
+      </button>
     </form>
   );
 };

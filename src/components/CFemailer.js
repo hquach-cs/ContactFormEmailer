@@ -25,7 +25,7 @@ export default function CFemailer(props) {
   return (
     <ButtonWrapper onClick={props.onClick}>
       <Button>
-        <i class="far fa-envelope"></i>
+        <i className="far fa-envelope"></i>
       </Button>
     </ButtonWrapper>
   );
