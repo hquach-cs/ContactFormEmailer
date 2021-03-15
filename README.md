@@ -16,8 +16,10 @@ With this project, I attended to learn some tools/skills for professional use:
 
 With my background in react.js, this was a simple project that is easy to mess up with. For emailing, I use the Nodemailer module that makes emailing easily given config/env parameters.
 
+<p float="left">
 <img src="ReadmeCode.png" alt="code" width="250" height="250"/>
-<img src="ReadmeConfirm.png" alt="code" width="250" height="250"/>
+<img src="ReadmeConfirm.png" alt="code" width="300" height="250"/>
+</p>
 <!-- ![Screenshot](ReadmeCode.png =250x250) ![Screenshot](ReadmeConfirm.png =250x250) -->
 
 ## Future
