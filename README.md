@@ -3,7 +3,7 @@
 This one project is out of many that showcase fundamental skills of react.js, node.js, and express.js. This project is intended to create a contact form button on bottom right that pops a form up. Then take input from user and send that email to a specific email suggested. This component allows user to easily implement in there websites.
 
 <p float="left">
-<img src="ReadmeEx.png" alt="code" width="250" height="250"/>
+<img src="ReadmeEx.png" alt="code" width="275" height="250"/>
 <img src="ReadmeCode.png" alt="code" width="250" height="250"/>
 <img src="ReadmeConfirm.png" alt="code" width="300" height="250"/>
 </p>
