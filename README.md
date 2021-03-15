@@ -16,7 +16,7 @@ With this project, I attended to learn some tools/skills for professional use:
 
 With my background in react.js, this was a simple project that is easy to mess up with. For emailing, I use the Nodemailer module that makes emailing easily given config/env parameters.
 
-![Screenshot](ReadmeCode.png) ![Screenshot](ReadmeConfirm.png)
+![Screenshot](ReadmeCode.png=250x250) ![Screenshot](ReadmeConfirm.png=250x250)
 
 ## Future
 
