@@ -13,7 +13,6 @@ const ContactForm = (props) => {
   const [formData, updateFormData] = useState(initialFormData);
 
   const handleSubmit = (e) => {
-    console.log(formData);
     e.preventDefault();
     axios({
       method: "POST",
@@ -39,7 +38,7 @@ const ContactForm = (props) => {
   };
 
   return (
-    <form style={{ display: props.open ? "flex" : "none" }} autocomplete="off">
+    <form style={{ display: props.open ? "flex" : "none" }}>
       <h2>Contact Form</h2>
       <div className="form__group field">
         <input
@@ -49,7 +48,6 @@ const ContactForm = (props) => {
           name="Name"
           id="name"
           onChange={handleChange}
-          autocomplete="off"
           required
         />
         <label htmlFor="Name" className="form__label">
@@ -64,7 +62,6 @@ const ContactForm = (props) => {
           name="Email"
           id="email"
           onChange={handleChange}
-          autocomplete="off"
           required
         />
         <label htmlFor="Email" className="form__label">
@@ -79,7 +76,6 @@ const ContactForm = (props) => {
           name="Subject"
           id="subject"
           onChange={handleChange}
-          autocomplete="off"
           required
         />
         <label htmlFor="Subject" className="form__label">
@@ -94,7 +90,6 @@ const ContactForm = (props) => {
           name="Message"
           id="message"
           onChange={handleChange}
-          autocomplete="off"
           required
         />
         <label htmlFor="Message" className="form__label">

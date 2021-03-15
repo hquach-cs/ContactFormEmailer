@@ -7,7 +7,12 @@ export default function App() {
 
   return (
     <div className="App">
-      <CFemailer color={"#4caf50"} onClick={() => setForm(!form)} />
+      <CFemailer
+        color={"#4caf50"}
+        onClick={() => setForm(!form)}
+        position="center"
+        shape="rect"
+      />
       <ContactForm open={form}></ContactForm>
     </div>
   );

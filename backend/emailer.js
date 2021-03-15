@@ -25,7 +25,6 @@ transporter.verify((error, success) => {
 
 router.post("/send", function (req, res, next) {
   console.log("Backend message recieved, Email: " + req.body.Email);
-  res.send("POST handler for /dogs route.");
   var email = {
     from: req.body.Name,
     to: config.USER, // Change to email address that you want to receive messages on
